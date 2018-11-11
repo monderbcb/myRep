@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="newGuiPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>sample.DbTables.Semester</class>
+    <class>sample.DbTables.Instructors</class>
+    <class>sample.DbTables.Student</class>
+    <class>sample.DbTables.Deans</class>
+    <class>sample.DbTables.InstructorPaymentInfo</class>
+    <class>sample.DbTables.Countries</class>
+    <class>sample.DbTables.StudentPayment</class>
+    <class>sample.DbTables.SubDepartment</class>
+    <class>sample.DbTables.MacPc</class>
+    <class>sample.DbTables.Subjects</class>
+    <class>sample.DbTables.Department</class>
+    <class>sample.DbTables.Users</class>
+    <class>sample.DbTables.InstructorSub</class>
+    <class>sample.DbTables.Prerequisites</class>
+    <class>sample.DbTables.InstructorPaymentLog</class>
+    <class>sample.DbTables.Log</class>
+    <class>sample.DbTables.Semester_1</class>
+    <class>sample.DbTables.Student_1</class>
+    <class>sample.DbTables.Instructors_1</class>
+    <class>sample.DbTables.Grade_1</class>
+    <class>sample.DbTables.Courses</class>
+    <class>sample.DbTables.Grade</class>
+    <class>sample.DbTables.StudentSub</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/newuni?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value=""/>
+    </properties>
+  </persistence-unit>
+</persistence>
