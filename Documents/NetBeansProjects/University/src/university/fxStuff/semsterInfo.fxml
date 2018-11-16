@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.SemsterInfoController">
+   <children>
+      <TabPane layoutY="37.0" prefHeight="376.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="-13.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="37.0">
+        <tabs>
+          <Tab fx:id="semInfoTabe" onSelectionChanged="#semInfoTabeHand" text="semster Informacions">
+            <content>
+                  <AnchorPane>
+                     <children>
+                        <Label layoutY="4.0" text="Semster's ID" />
+                        <Label layoutY="29.0" text="Semster's Name" />
+                        <Label layoutY="52.0" text="Semster's Start" />
+                        <Label layoutY="75.0" text="Semster's End" />
+                        <TableView fx:id="TableStuffT" editable="true" layoutY="130.0" prefHeight="175.0" prefWidth="600.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="idC" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="nameC" prefWidth="75.0" text="Name" />
+                              <TableColumn fx:id="StartC" prefWidth="75.0" text="Start" />
+                              <TableColumn fx:id="endC" prefWidth="75.0" text="End" />
+                              <TableColumn fx:id="subjectssStudiedC" prefWidth="75.0" text="Subject Studied In Semster" />
+                              <TableColumn fx:id="studentPayC" prefWidth="75.0" text="Student  Payed This Semster" />
+                              <TableColumn fx:id="studentRegesterdC" prefWidth="75.0" text="Student Regesterd " />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <TextField fx:id="semsterIdT" editable="false" layoutX="362.0" />
+                        <TextField fx:id="semsterNameT" layoutX="362.0" layoutY="25.0" />
+                        <DatePicker fx:id="semsterStartD" layoutX="361.0" layoutY="48.0" />
+                        <DatePicker fx:id="semsterEndD" layoutX="361.0" layoutY="71.0" />
+                        <Label fx:id="rgStudentSemL" layoutY="96.0" text="Label" />
+                        <Label fx:id="regGradeSemL" layoutY="159.0" text="Label" />
+                        <Label fx:id="regStuSubSemL" layoutX="448.0" layoutY="96.0" text="Label" />
+                        <Label fx:id="regInstructSemL" layoutX="448.0" layoutY="159.0" text="Label" />
+                        <Label fx:id="regStudPaySemL" layoutX="211.0" layoutY="96.0" text="Label" />
+                        <Label fx:id="regIrnstructorSubListL" layoutX="211.0" layoutY="159.0" text="Label" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="semsterAssoicTabe" onSelectionChanged="#semsterAccHand" text="Semsster Accosiets">
+            <content>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints prefHeight="24.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="233.0" minHeight="10.0" prefHeight="220.0" vgrow="SOMETIMES" />
+                        <RowConstraints prefHeight="13.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="244.0" minHeight="10.0" prefHeight="240.0" vgrow="SOMETIMES" />
+                        <RowConstraints vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="235.0" minHeight="10.0" prefHeight="228.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TableView fx:id="gradeTableInSemT" prefHeight="200.0" prefWidth="449.0" tableMenuButtonVisible="true" GridPane.rowIndex="1">
+                          <columns>
+                            <TableColumn fx:id="colIdGradeC" prefWidth="77.0" text="Name-Subject" />
+                              <TableColumn fx:id="colMiddlGradeC" prefWidth="111.0" text="Mid-Terms Grade" />
+                              <TableColumn fx:id="colFinalGradeC" prefWidth="108.0" text="Final-Exam Grade" />
+                              <TableColumn fx:id="colResGradeC" prefWidth="68.0" text="Reasult-Subject" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <TableView fx:id="instructSubSemsTable" prefHeight="230.0" prefWidth="453.0" tableMenuButtonVisible="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                          <columns>
+                            <TableColumn fx:id="colNamInstruSubTaC" prefWidth="75.0" text="Instructor Name" />
+                            <TableColumn fx:id="colSubjInstructorSubTaC" prefWidth="75.0" text="Suject Name" />
+                              <TableColumn fx:id="colGroupInstructSuTac" prefWidth="75.0" text="Group Number" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <TableView fx:id="instructorInfoTable" prefHeight="200.0" prefWidth="451.0" tableMenuButtonVisible="true" GridPane.rowIndex="3">
+                          <columns>
+                            <TableColumn fx:id="colInstructNameInstructTabC" prefWidth="75.0" text="Name" />
+                            <TableColumn fx:id="colDepartmInstructInfoTabC" prefWidth="75.0" text="Department" />
+                              <TableColumn fx:id="colDegreInstroctInfoTabC" prefWidth="75.0" text="Degree" />
+                              <TableColumn fx:id="colMjorInstructInoTabC" prefWidth="75.0" text="Majore" />
+                              <TableColumn fx:id="colIsDeanInstructInfoTabC" prefWidth="75.0" text="Is A Dean ?" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <TableView fx:id="stuSemsTable" prefHeight="200.0" prefWidth="446.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                          <columns>
+                            <TableColumn fx:id="colStuIDSemsTabC" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="colNamStuSemsTabC" prefWidth="75.0" text="Name" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <TableView prefHeight="200.0" prefWidth="445.0" GridPane.rowIndex="5">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                        </TableView>
+                        <Label text="Grades That Are Depending on This Semster" />
+                        <Label text="Instructer Who Are Theching Subjectds In This Semester" GridPane.columnIndex="1" />
+                        <Label text="Students Who Started Styding In This Instotiocion At This Semster" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Instructers Who Joined This Instutocion In This Semster" GridPane.rowIndex="2" />
+                        <Label text="Student Who Are Payed There Fees In This Semester" GridPane.rowIndex="4" />
+                        <Label text="Subject Which Are Being Studied This Semester" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TableView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </GridPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <ToolBar layoutY="-6.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <items>
+          <Button fx:id="newSemB" defaultButton="true" mnemonicParsing="false" onAction="#newSemesterHand" text="Open New Semster" textFill="#27b938" />
+            <Button fx:id="editeSemB" disable="true" mnemonicParsing="false" onAction="#editeSemesterHand" text="Update The Selected Semester" textFill="#c3a70d" />
+            <Button fx:id="deleteSemB" disable="true" mnemonicParsing="false" onAction="#deleteSemesterHand" text="Delete This Semester" textFill="#dd0f0f" />
+            <Label fx:id="selectedSemsterLabel" text="Selected Semester Is " textFill="#d70e0e" />
+        </items>
+      </ToolBar>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

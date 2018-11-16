@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane fx:id="studentView" prefHeight="649.0" prefWidth="772.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.studentController">
+    <left>
+        <ListView fx:id="studentListView">
+
+        </ListView>
+    </left>
+   <top>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <Button fx:id="addB" defaultButton="true" mnemonicParsing="false" onAction="#addHandler" text="Add New Student" />
+            <Button fx:id="editB" contentDisplay="CENTER" mnemonicParsing="false" onAction="#editHandler" text="Edite Students Information" />
+            <Button fx:id="deleteB" contentDisplay="CENTER" mnemonicParsing="false" onAction="#deleteHand" text="Delet a Student" />
+            <Label fx:id="studentCount" text="Label" wrapText="true" />
+        </items>
+      </ToolBar>
+   </top>
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Untitled Tab 1">
+           <content>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="178.0" minHeight="10.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="68.0" minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="45.0" minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="42.0" minHeight="8.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="39.0" minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="34.0" minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="36.0" minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="36.0" minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="34.0" minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="34.0" minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="49.0" minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="82.0" minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fx:id="stuPhoto" fitHeight="181.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label text="Name" GridPane.columnIndex="1" />
+                        <Label text="ID" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Social Number" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="stunameText" GridPane.columnIndex="2" />
+                        <TextField fx:id="stuIDText" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField fx:id="stuScioText" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <TextField fx:id="stuPhoneText" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <TextField fx:id="stuNatoText" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <Label text="Phone Number" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="Natonalty" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label text="Address" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                        <TextArea fx:id="stuAdText" prefHeight="34.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+                        <Label text="Notes" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                        <TextArea fx:id="stuNotesText" prefHeight="65.0" prefWidth="214.0" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+                        <Label text="Stauts" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label text="Majore" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Label text="Acadmic Year" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <Label text="Semster" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                        <Label text="Department" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <TextField fx:id="stuStutsText" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                        <TextField fx:id="stuMajoreText1" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                        <TextField fx:id="stuDepText" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                        <TextField fx:id="stuAcYText" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                        <TextField fx:id="stuSemsText" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                     </children>
+                  </GridPane>
+            </content>
+          </Tab>
+          
+          <Tab text="Untitled Tab 2" />
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
